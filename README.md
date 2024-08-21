@@ -2,6 +2,9 @@
 
 A user-friendly summarizer designed for effortless information retrieval. Users can input article URLs and ask questions to receive relevant insights from the stock market and financial domain.
 
+## Description:
+This Python script builds a Streamlit web application called "Article Summarizer." It allows users to input up to three news article URLs via a sidebar. Upon clicking "Process URLs," the script retrieves and processes the content of these URLs using the UnstructuredURLLoader, splitting the text into smaller chunks for better analysis. It then generates embeddings using OpenAI's API and stores them in a FAISS vector index, which is saved as a pickle file for later use. Users can input queries, and the tool retrieves relevant answers along with their sources by loading the saved FAISS index and leveraging a retrieval-based question-answering chain powered by OpenAI's language model.
+
 ## Features
 Load URLs or upload text files containing URLs to fetch article content.<br>
 Process article content through LangChain's UnstructuredURL Loader.<br>
